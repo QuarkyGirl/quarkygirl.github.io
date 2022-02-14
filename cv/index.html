@@ -2,122 +2,130 @@
 <html>
 <head>
 <title>Eleanor Hall</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" media="only screen and (min-device-width: 1200px)" href="../style.css" type="text/css" />
-<link rel="stylesheet" media="only screen and (max-device-width: 1200px)" href="../mobile.css" type="text/css" />
+<meta name="author" content="Eleanor Hall">
+<meta name="description" content="Nell Hall is a theoretical particle physicist at UC Berkeley.">
+
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/load-content.js"></script>
+<link rel="stylesheet" media="only screen and (min-device-width: 1200px)" href="/style.css" type="text/css" />
+<link rel="stylesheet" media="only screen and (max-device-width: 1200px)" href="/mobile.css" type="text/css" />
 <link rel="stylesheet" href="indents.css" type="text/css" />
-<link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
-<link rel="manifest" href="../img/site.webmanifest">
-<link rel="mask-icon" href="../img/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/img/favicon.ico">
+
 <meta name="msapplication-TileColor" content="#2b5797">
-<meta name="msapplication-config" content="../img/browserconfig.xml">
+<meta name="msapplication-config" content="img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-<!-- Global site tag (gtag.js) - Google Analytics -->
 </head>
 <body>
 
-<div class=TitleContainer id=BoxContainer>
-  <canvas width=100 height=100 id=Box></canvas>
-  <div class=MouseListener id=MouseListener></div>
-  <div class=TitleBox >
-    <div class=Name id=Name>
-      Eleanor Hall
-    </div>
-    <div class=Button ><a href="../">Home</a></div>
-    <div class=Button ><a href="../physics">Physics</a></div>
-    <div class=Button ><a href="../cv">CV</a></div>
-    <div class=Button ><a href="../contact">Contact</a></div>
+<header id=header>
+  <svg height="100%" width="100%" id=box>
+  </svg>
+  <div id=mouse-listener></div>
+  <nav>
+    <ul id=menu>
+      <li class=button><a href="/">Home</a></li>
+      <li class=button><a href="/physics">Physics</a></li>
+      <li class=button><a href="/cv">CV</a></li>
+      <li class=button><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div id=name>
+    Eleanor Hall
   </div>
-</div>
+</header>
 
-<div class=BodyContainer>
-  <div class=Content>
-  <h1> Curriculum Vitae </h1>
+<main>
+  <div id=content>
+    <h1> Curriculum Vitae </h1>
 
-  <h2><a href="Eleanor_Hall_CV.pdf">Click for PDF</a></h2>
+    <h2><a href="Eleanor_Hall_CV.pdf">Click for PDF</a></h2>
 
-  <h2>Contact</h2>
-  <p>nellhall@berkeley.edu</p>
+    <h2>Contact</h2>
+    <p>nellhall@berkeley.edu</p>
 
-  <h2>Education</h2>
+    <h2>Education</h2>
 
-    <h3>University of California, Berkeley</h3>
-    <p>August 2018 - Present</p>
-    <p>Doctoral Student</p>
+      <h3>University of California, Berkeley</h3>
+      <p>August 2018 - Present</p>
+      <p>Doctoral Student</p>
 
-    <h3>Massachusetts Institute of Technology</h3>
-    <p>August 2014 - June 2018</p>
-    <p>Bachelor of Science in Physics</p>
-    <p>Thesis: Photon Isolation and Jet Substructure</p>
+      <h3>Massachusetts Institute of Technology</h3>
+      <p>August 2014 - June 2018</p>
+      <p>Bachelor of Science in Physics</p>
+      <p>Thesis: Photon Isolation and Jet Substructure</p>
 
-  <h2>Awards and Fellowships</h2>
-    <p> Graduate Research Fellowship Program, National Science Foundation, 2018 </p>
-    <p> Joel Matthew Orloff Award for Service, MIT, 2017 </p>
-    <p> History Undergraduate Writing Prize, MIT, 2017 </p>
+    <h2>Awards and Fellowships</h2>
+      <p> Graduate Research Fellowship Program, National Science Foundation, 2018 </p>
+      <p> Joel Matthew Orloff Award for Service, MIT, 2017 </p>
+      <p> History Undergraduate Writing Prize, MIT, 2017 </p>
 
-  <h2> Publications </h2>
-    <h3> Asymmetric Matters from a Dark First-Order Phase Transition </h3>
-    <p> with Thomas Konstandin, Robert McGehee, and Hitoshi Murayama </p>
-    <p> <a href="https://arxiv.org/abs/1911.12342"> arXiv:1911.12342 </a> </p>
+    <h2> Publications </h2>
+      <h3> Asymmetric Matters from a Dark First-Order Phase Transition </h3>
+      <p> with Thomas Konstandin, Robert McGehee, and Hitoshi Murayama </p>
+      <p> <a href="https://arxiv.org/abs/1911.12342"> arXiv:1911.12342 </a> </p>
 
-    <h3> Baryogenesis From a Dark First-Order Phase Transition </h3>
-    <p> with Thomas Konstandin, Robert McGehee, Hitoshi Murayama, and G&eacute;raldine Servant </p>
-    <p> <a href="https://arxiv.org/abs/1910.08068"> arXiv:1910.08068</a> </p>
+      <h3> Baryogenesis From a Dark First-Order Phase Transition </h3>
+      <p> with Thomas Konstandin, Robert McGehee, Hitoshi Murayama, and G&eacute;raldine Servant </p>
+      <p> <a href="https://arxiv.org/abs/1910.08068"> arXiv:1910.08068</a> </p>
 
-    <h3> Photon isolation and jet substructure </h3>
-    <p> with Jesse Thaler </p>
-    <p> JHEP 1809, 164 (2018) <a href="https://arxiv.org/abs/1805.11622">arXiv:1805.11622</a> </p>
+      <h3> Photon isolation and jet substructure </h3>
+      <p> with Jesse Thaler </p>
+      <p> JHEP 1809, 164 (2018) <a href="https://arxiv.org/abs/1805.11622">arXiv:1805.11622</a> </p>
 
-  <h2>Research Experience</h2>
+    <h2>Research Experience</h2>
 
-    <h3>Berkeley Center for Theoretical Physics</h3>
-    <p>February 2019 - Present</p>
-    <p>Advisor: Hitoshi Murayama</p>
+      <h3>Berkeley Center for Theoretical Physics</h3>
+      <p>February 2019 - Present</p>
+      <p>Advisor: Hitoshi Murayama</p>
 
-    <h3>MIT Center for Theoretical Physics</h3>
-    <p>February 2017 - June 2018</p>
-    <p>Advisor: Jesse Thaler</p>
+      <h3>MIT Center for Theoretical Physics</h3>
+      <p>February 2017 - June 2018</p>
+      <p>Advisor: Jesse Thaler</p>
 
-    <h3>MIT Laboratory for Nuclear Science</h3>
-    <p>February 2017 - May 2017</p>
-    <p>Advisor: Janet Conrad</p>
+      <h3>MIT Laboratory for Nuclear Science</h3>
+      <p>February 2017 - May 2017</p>
+      <p>Advisor: Janet Conrad</p>
 
-    <h3>Institute for Soldier Nanotechnologies</h3>
-    <p>June 2016 - December 2016</p>
-    <p>Advisor: Marin Soljacic</p>
+      <h3>Institute for Soldier Nanotechnologies</h3>
+      <p>June 2016 - December 2016</p>
+      <p>Advisor: Marin Soljacic</p>
 
-    <h3>MIT Nuclear Reactor Laboratory</h3>
-    <p>June 2015 - August 2015</p>
-    <p>Advisor: Boris Khaykovich</p>
+      <h3>MIT Nuclear Reactor Laboratory</h3>
+      <p>June 2015 - August 2015</p>
+      <p>Advisor: Boris Khaykovich</p>
 
-  <h2>Teaching</h2>
-    <h3> Berkeley Physics 111B: Advanced Experimental Lab</h3>
-    <p> Spring 2019 </p>
-    <p> Graduate Student Instructor </p>
+    <h2>Teaching</h2>
+      <h3> Berkeley Physics 111B: Advanced Experimental Lab</h3>
+      <p> Spring 2019 </p>
+      <p> Graduate Student Instructor </p>
 
-    <h3> Berkeley Physics 8.B: Introductory Physics 2</h3>
-    <p> Fall 2018 </p>
-    <p> Graduate Student Instructor </p>
+      <h3> Berkeley Physics 8.B: Introductory Physics 2</h3>
+      <p> Fall 2018 </p>
+      <p> Graduate Student Instructor </p>
 
-    <h3> MIT 8.13: Junior Lab</h3>
-    <p> Fall 2017 & Spring 2018 </p>
-    <p> Undergraduate Teaching Assistant </p>
+      <h3> MIT 8.13: Junior Lab</h3>
+      <p> Fall 2017 & Spring 2018 </p>
+      <p> Undergraduate Teaching Assistant </p>
 
-  <h2>Leadership Experience</h2>
-    <h3>Society of Physics Students</h3>
-    <p>Secretary: June 2017 - May 2018</p>
-    <p>Vice President: June 2016 - May 2017</p>
-
-</div>
-</div>
-
+    <h2>Leadership Experience</h2>
+      <h3>Society of Physics Students</h3>
+      <p>Secretary: June 2017 - May 2018</p>
+      <p>Vice President: June 2016 - May 2017</p>
+  </div>
+</main>
+<footer>
+  <p> (c) 2022 Eleanor Hall </p>
+</footer>
 </body>
-
 <script src="https://d3js.org/d3-voronoi.v1.min.js"></script>
-
-<script src="../scripts/voronoi-julia.js"></script>
-
+<script src="/scripts/delauney.js"></script>
+<script src="/scripts/windowsize.js"></script>
 </html>

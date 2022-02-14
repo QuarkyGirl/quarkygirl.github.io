@@ -1,90 +1,160 @@
-@import url('https://fonts.googleapis.com/css?family=Cormorant');
+@font-face {
+    font-family: 'Mix-Serif';
+    src: url('mix_serif.woff2') format('woff2'),
+         url('mix_serif.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-html{
-  --pad: #d7e6e8;
+@font-face {
+    font-family: 'Source Serif Pro';
+    src: url('SourceSerifPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Serif Pro';
+    src: url('SourceSerifPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+
   --bg: white;
-  --theme: #51d0de;
-  --theme-alt: #89e2ed;
-  --title-text: white;
-  --highlight-text: #bf4aa8;
-  --body-text: #444747;
+  --theme: #e83e8d;
+  --title-text: black;
+  --heading-text: #e83e8d;
+  --body-text: black;
+  --highlight-text: #e83e8d;
+  --footer-text: grey;
 }
 
 body {
-  font-family: 'Cormorant';
-  background-color: var(--pad);
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'Mix-Serif';
+  background: url(paper.svg);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  padding: 0;
   margin: 0;
 }
 
-.TitleContainer {
-  position: relative;
-  height: 250px;
-  margin-left: 0%;
-  margin-right: 0%;
-}
-
-.BodyContainer {
-  display: flex;
-  flex-direction: column-reverse;
-  -webkit-text-size-adjust: none;
-  overflow: hidden;
-  position: relative;
-  margin:0;
+h1 {
+  margin: 0;
   margin-bottom: 20px;
   padding: 0;
-  background-color: var(--bg);
+
+  font-size: 32px;
+  color: var(--heading-text);
+}
+
+h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-size: 24px;
+  color: var(--heading-text);
+}
+
+h3,h4,h5 {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
   color: var(--body-text);
 }
 
-.Content {
-  padding: 20px;
-}
-
-.BodyContainer h1{
-  padding-left: 0%;
-  margin: 0px;
+p {
+  margin: 0;
   margin-bottom: 10px;
-  margin-top: 0px;
-  color: var(--highlight-text);
-}
+  padding: 0;
 
-.BodyContainer p{
+  /*   display: block;
+    overflow: hidden; */
+
+  font-family: 'Source Serif Pro', serif;
   font-size: 18px;
+  font-weight: 300;
 }
 
-.BodyContainer a{
+a {
   text-decoration: none;
   color: var(--highlight-text);
-  font-weight: bold;
+  font-weight: 400;
 }
 
-.ImageWrapper{
-  height: 80px;
-  background-color: var(--pad);
-}
+header {
+  position: relative;
 
- .ImageWrapper img{
-  display: block;
-  background-color: var(--bg);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  height:100px;
+  margin: 0;
   padding: 0;
-  border: solid 5px var(--pad);
-  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 35%;
+  min-height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 900px;
+
+  flex-grow: 1;
+}
+
+#content{
+  flex: 2;
+}
+
+.ImageWrapper {
+  float: right;
+  width: 33%;
+  max-width: 300px;
+}
+
+img{
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 10px;
 }
 
 svg {
-  padding:0px;
-  /*background-color: #51d0de;*/
-  background-image: linear-gradient(to bottom,var(--theme-alt),var(--theme));
+  margin:0;
+  padding:0;
+  position:absolute;
+  top:0;
+  left:0;
   border-style: none;
   border-radius: 0px;
+  box-sizing: content-box;
+  z-index: -1
 }
 
 canvas {
@@ -94,14 +164,13 @@ canvas {
   border-radius: 0px;
 }
 
-.MouseListener {
+#mouse-listener {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   z-index: 1;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 @keyframes fadeIn {
@@ -110,64 +179,62 @@ canvas {
   }
 }
 
-.TitleBox {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-left:10px;
-  padding-right:10px;
-  padding-bottom:10px;
-  position: absolute;
-  max-width:100%;
-  bottom: 0;
-  left: 0;
+nav {
+  margin:0;
+  padding:0;
+  width:100%;
   z-index: 2;
-  margin-left:10px;
-  margin-right:10px;
   color: var(--title-text);
   opacity: 0;
   animation: fadeIn .5s ease-in 1 forwards;
 }
 
-.TitleBox .Name {
+#name {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  margin-left: 0%;
-  margin-right: 0%;
   font-size: 40px;
   font-weight: bold;
-  bottom:0;
-  left:0;
+  color: var(--title-text);
+  padding-left: 0px;
+  padding-right: 10px;
+  bottom: 0;
 }
 
-.TitleBox .Button {
-    background: none;
+.button {
+    display: inline-block;
+    background: None;
     margin:0;
     padding: 0;
+    bottom:0;
+    height:100%;
 }
 
-.TitleBox a{
+
+nav a{
+  padding: 10px;
+  padding-left: 0;
+  padding-right: 20px;
+  margin:0;
   text-decoration: none;
   color: var(--title-text);
-  font-weight: bold;
+  font-weight: normal;
+  font-size: x-large;
   text-align: bottom;
-  font-size: 24px;
-  margin:0;
-  padding:0;
 }
 
-.Footer {
-  background-color: var(--pad);
-  color: var(--body-text);
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+nav a:hover {
+    color: var(--highlight-text);
 }
 
-@media only screen and (max-width: 365px) {
-  .TitleBox a{
-    font-size: 20px;
-    margin-right: 10px;
-  }
+
+footer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  color: var(--footer-text);
 }

@@ -1,68 +1,143 @@
-@import url('https://fonts.googleapis.com/css?family=Cormorant');
+@font-face {
+    font-family: 'Mix-Serif';
+    src: url('mix_serif.woff2') format('woff2'),
+         url('mix_serif.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Serif Pro';
+    src: url('SourceSerifPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Serif Pro';
+    src: url('SourceSerifPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 
 html {
   height: 100%;
-  --pad: #d7e6e8;
+  width: 100%;
+
   --bg: white;
-  --theme: #51d0de;
-  --theme-alt: #89e2ed;
-  --title-text: white;
-  --highlight-text: #bf4aa8;
-  --body-text: #444747;
+  --theme: #e83e8d;
+  --title-text: black;
+  --heading-text: #e83e8d;
+  --body-text: black;
+  --highlight-text: #e83e8d;
+  --footer-text: grey;
 }
 
 body {
-  font-family: 'Cormorant';
-  background-color: var(--pad);
   margin: 0;
-  height: 100%;
+  padding: 0;
+  padding-left: 22%;
+  padding-right: 22%;
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'Mix-Serif';
+  background: url(paper.svg);
 }
 
-.TitleContainer {
-  position: relative;
-  margin-left: 0%;
-  margin-right: 0%;
-  height: 35%;
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
-.BodyContainer {
-  height: auto;
-  width: 60%;
-  max-width: 900px;
-  position: relative;
-  margin-top: 20px;
+li {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
   margin-bottom: 20px;
-  margin-left: 20%;
-  margin-right: 20%;
-  background-color: var(--bg);
-  padding: 20px;
-  overflow:auto;
+  padding: 0;
+
+  font-size: 32px;
+  color: var(--heading-text);
 }
 
-.BodyContainer .Content{
+h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-size: 24px;
+  color: var(--heading-text);
+}
+
+h3,h4,h5 {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  color: var(--body-text);
+}
+
+p {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+
+  /*   display: block;
+    overflow: hidden; */
+
+  font-family: 'Source Serif Pro', serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: var(--highlight-text);
+  font-weight: 400;
+}
+
+header {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 35%;
+  min-height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 900px;
+
+  flex-grow: 1;
+}
+
+#content{
   flex: 2;
 }
 
-.BodyContainer h1 {
-  padding-left: 0%;
-  margin: 0px;
-  margin-bottom: 10px;
-  color: var(--highlight-text);
-}
-
-.BodyContainer p{
-  font-size: 18px;
-  display: block;
-  overflow: hidden;
-}
-
-.BodyContainer .ImageWrapper {
+.ImageWrapper {
   float: right;
   width: 33%;
   max-width: 300px;
 }
 
-.BodyContainer img{
+img{
   max-width: 100%;
   padding: 0;
   margin: 0;
@@ -70,22 +145,16 @@ body {
   padding-bottom: 10px;
 }
 
-.BodyContainer a{
-  text-decoration: none;
-  color: var(--highlight-text);
-  font-weight: bold;
-}
-
-.BodyContainer a:hover {
-    color: white;
-    background-color: var(--highlight-text);
-}
-
 svg {
-  padding:0px;
-  background-color: var(--theme);
+  margin:0;
+  padding:0;
+  position:absolute;
+  top:0;
+  left:0;
   border-style: none;
   border-radius: 0px;
+  box-sizing: content-box;
+  z-index: -1
 }
 
 canvas {
@@ -95,8 +164,7 @@ canvas {
   border-radius: 0px;
 }
 
-
-.MouseListener {
+#mouse-listener {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -111,32 +179,29 @@ canvas {
   }
 }
 
-.TitleBox {
-  padding-left:20px;
-  padding-bottom:0px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+nav {
+  margin:0;
+  padding:0;
+  width:100%;
   z-index: 2;
-  margin-left:20%;
-  margin-right:20%;
   color: var(--title-text);
   opacity: 0;
   animation: fadeIn .5s ease-in 1 forwards;
 }
 
-.TitleBox .Name {
-  margin-left: 0%;
-  margin-right: 0%;
+#name {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   font-size: 40px;
   font-weight: bold;
-  bottom:0;
-  left: 0;
+  color: var(--title-text);
   padding-left: 0px;
   padding-right: 10px;
+  bottom: 0;
 }
 
-.TitleBox .Button {
+.button {
     display: inline-block;
     background: None;
     margin:0;
@@ -145,42 +210,31 @@ canvas {
     height:100%;
 }
 
-@media only screen and (min-width: 1100px) {
-  .TitleBox .Name {
-    display: inline-block;
-  }
 
-  .TitleBox a {
-    padding-left: 20px;
-  }
-}
-
-
-.TitleBox a{
+nav a{
+  padding: 10px;
+  padding-left: 0;
+  padding-right: 20px;
+  margin:0;
   text-decoration: none;
   color: var(--title-text);
   font-weight: normal;
   font-size: x-large;
   text-align: bottom;
-  padding-right: 20px;
-  margin:0;
 }
 
-.TitleBox .Button:hover {
-    background-color: var(--highlight-text);
+nav a:hover {
+    color: var(--highlight-text);
 }
 
-.Footer {
-  width: 60%;
-  max-width: 1000px;
+
+footer {
   margin: 0;
-  margin-left: 20%;
-  margin-right: 20%;
-  background-color: var(--pad);
-  color: var(--body-text);
-  min-height: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 0px;
-  padding-bottom: 5px;
+  padding: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  color: var(--footer-text);
 }

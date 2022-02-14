@@ -2,49 +2,59 @@
 <html>
 <head>
 <title>Eleanor Hall</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" media="only screen and (min-device-width: 1200px)" href="../style.css" type="text/css" />
-<link rel="stylesheet" media="only screen and (max-device-width: 1200px)" href="../mobile.css" type="text/css" />
-<link rel="stylesheet" href="indents.css" type="text/css" />
-<link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
-<link rel="manifest" href="../img/site.webmanifest">
-<link rel="mask-icon" href="../img/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="../img/favicon.ico">
-<meta name="msapplication-TileColor" content="#2b5797">
-<meta name="msapplication-config" content="../img/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Eleanor Hall">
+<meta name="description" content="Nell Hall is a theoretical particle physicist at UC Berkeley.">
+
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/load-content.js"></script>
+<link rel="stylesheet" media="only screen and (min-device-width: 1200px)" href="/style.css" type="text/css" />
+<link rel="stylesheet" media="only screen and (max-device-width: 1200px)" href="/mobile.css" type="text/css" />
+<link rel="stylesheet" href="indents.css" type="text/css" />
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/img/favicon.ico">
+
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="msapplication-config" content="img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 </head>
 <body>
 
-<div class=TitleContainer id=BoxContainer>
-  <canvas width=100 height=100 id=Box></canvas>
-  <div class=MouseListener id=MouseListener></div>
-  <div class=TitleBox >
-    <div class=Name id=Name>
-      Eleanor Hall
-    </div>
-    <div class=Button ><a href="../">Home</a></div>
-    <div class=Button ><a href="../physics">Physics</a></div>
-    <div class=Button ><a href="../cv">CV</a></div>
-    <div class=Button ><a href="../contact">Contact</a></div>
+<header id=header>
+  <svg height="100%" width="100%" id=box>
+  </svg>
+  <div id=mouse-listener></div>
+  <nav>
+    <ul id=menu>
+      <li class=button><a href="/">Home</a></li>
+      <li class=button><a href="/physics">Physics</a></li>
+      <li class=button><a href="/cv">CV</a></li>
+      <li class=button><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div id=name>
+    Eleanor Hall
   </div>
-</div>
+</header>
 
-<div class=BodyContainer>
-  <div class=Content>
-  <h1>Contact</h1>
-  <h3>email</h3>
-  <p>nellhall@mit.edu</p>
-  <p>nellhall@berkeley.edu</p>
-</div>
-</div>
+<main>
+  <div id=content>
+    <h1>Contact</h1>
+    <h3>email</h3>
+    <p>nellhall@mit.edu</p>
+    <p>nellhall@berkeley.edu</p>
+  </div>
+</main>
+<footer>
+  <p> (c) 2022 Eleanor Hall </p>
+</footer>
 </body>
-
 <script src="https://d3js.org/d3-voronoi.v1.min.js"></script>
-
-<script src="../scripts/voronoi-julia-2.js"></script>
-
+<script src="/scripts/delauney.js"></script>
+<script src="/scripts/windowsize.js"></script>
 </html>
