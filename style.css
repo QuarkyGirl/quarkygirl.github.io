@@ -72,19 +72,6 @@ h1 {
   color: var(--heading-text);
 }
 
-@media all and (max-width: 1200px){
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-@media all and (max-width: 600px){
-  h1 {
-    font-size: 1.625em;
-  }
-}
-
 h2 {
   margin: 0;
   margin-bottom: 20px;
@@ -261,4 +248,20 @@ footer {
 footer p {
   margin: 0;
   color: var(--footer-text);
+}
+
+@media all and (max-width: 1000px){
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  h1 {
+    font-size: 1.625em;
+  }
+
+  nav a{
+    font-size: 1.25em;
+    padding-right: 10px;
+  }
 }
