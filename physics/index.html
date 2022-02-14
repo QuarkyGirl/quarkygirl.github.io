@@ -9,15 +9,14 @@
 
 <script src="scripts/jquery-3.4.1.min.js"></script>
 <script src="scripts/load-content.js"></script>
-<link rel="stylesheet" media="only screen and (min-device-width: 1200px)" href="/style.css" type="text/css" />
-<link rel="stylesheet" media="only screen and (max-device-width: 1200px)" href="/mobile.css" type="text/css" />
+<link rel="stylesheet" href="../style.css" type="text/css" />
 <link rel="stylesheet" href="indents.css" type="text/css" />
 <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-<link rel="manifest" href="/img/site.webmanifest">
-<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+<link rel="manifest" href="../img/site.webmanifest">
+<link rel="mask-icon" href="../img/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="../img/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#2b5797">
 <meta name="msapplication-config" content="img/browserconfig.xml">
@@ -29,33 +28,33 @@
   <svg height="100%" width="100%" id=box>
   </svg>
   <div id=mouse-listener></div>
-  <nav>
+  <nav role="navigation">
     <ul id=menu>
-      <li class=button><a href="/">Home</a></li>
-      <li class=button><a href="/physics">Physics</a></li>
-      <li class=button><a href="/cv">CV</a></li>
-      <li class=button><a href="/contact">Contact</a></li>
+      <li class=button><a href="../">home</a></li>
+      <li class=button><a href="../physics">physics</a></li>
+      <li class=button><a href="../cv">cv</a></li>
+      <li class=button><a href="../contact">contact</a></li>
     </ul>
   </nav>
-  <div id=name>
-    Eleanor Hall
-  </div>
+  <h1 id=name>
+    <span class="stretch">&lt</span>nell | hall<span class="stretch">&gt</span><mark>_{physics}</mark>
+  </h1>
+  <h1>
+  </h1>
 </header>
 
 <main>
   <div id=content>
-    <h1> Physics </h1>
-
     <h2> Research Interests </h2>
     <p>
-      My interests span a wide range of particle theory and phenomenology including
-      QCD and collider phenomenology, baryogenesis, and more theoretical aspects
-      of field theory.
+      My one true love is non-perturbative physics, and as such my research interests
+      span a wide range of topics within particle theory, including thermal field
+      theory, false vacuum decay + phase transitions, QCD + collider phenomenology,
+      and baryogenesis.
     </p>
-
     <h2> Projects </h2>
-    <h3><a href="https://arxiv.org/abs/1911.12342">
-      Asymmetric Matters from a Dark First-Order Phase Transition [arXiv:1911.12342]</a>
+    <h3>
+      Asymmetric Matters from a Dark First-Order Phase Transition <a href="https://arxiv.org/abs/1911.12342">[arXiv:1911.12342]</a>
     </h3>
     <p>
       with Thomas Konstandin, Robert McGehee, and Hitoshi Murayama
@@ -73,8 +72,8 @@
       phase transition may be confirmed at future gravitational wave observatories.
     </p>
     <p></p>
-    <h3><a href="https://arxiv.org/abs/1910.08068">
-      Baryogenesis From a Dark First-Order Phase Transition [arXiv:1910.08068]</a>
+    <h3>
+      Baryogenesis From a Dark First-Order Phase Transition <a href="https://arxiv.org/abs/1910.08068">[arXiv:1910.08068]</a>
     </h3>
     <p>
       with Thomas Konstandin, Robert McGehee, Hitoshi Murayama, and G&eacute;raldine Servant
@@ -88,8 +87,8 @@
       and stochastic gravitational waves, all detectable by future experiments.
     </p>
     <p></p>
-    <h3><a href="https://arxiv.org/abs/1805.11622">
-      Photon Isolation and Jet Substucture [arXiv:1805.11622]</a>
+    <h3>
+      Photon Isolation and Jet Substucture <a href="https://arxiv.org/abs/1805.11622">[arXiv:1805.11622]</a>
     </h3>
     <p>
       with Jesse Thaler
@@ -114,6 +113,6 @@
 </footer>
 </body>
 <script src="https://d3js.org/d3-voronoi.v1.min.js"></script>
-<script src="/scripts/delauney.js"></script>
+<script src="../scripts/delauney.js"></script>
 <script src="/scripts/windowsize.js"></script>
 </html>

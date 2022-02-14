@@ -27,7 +27,7 @@ html {
   --bg: white;
   --theme: #e83e8d;
   --title-text: black;
-  --heading-text: #e83e8d;
+  --heading-text: black;
   --body-text: black;
   --highlight-text: #e83e8d;
   --footer-text: grey;
@@ -58,28 +58,53 @@ li {
   margin: 0;
 }
 
+mark {
+  background: none;
+  color: var(--highlight-text);
+}
+
 h1 {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   padding: 0;
 
-  font-size: 32px;
+  font-size: 40px;
   color: var(--heading-text);
+}
+
+@media all and (max-width: 1200px){
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media all and (max-width: 600px){
+  h1 {
+    font-size: 26px;
+  }
 }
 
 h2 {
   margin: 0;
   margin-bottom: 20px;
+  margin-top: 20px;
   padding: 0;
 
   font-size: 24px;
+  font-family: 'Source Serif Pro';
+  font-weight: 400;
   color: var(--heading-text);
 }
 
 h3,h4,h5 {
   margin: 0;
   margin-bottom: 10px;
+  margin-top: 20px;
   padding: 0;
+
+  font-family: 'Source Serif Pro';
+  font-weight: 400;
   color: var(--body-text);
 }
 
@@ -102,6 +127,15 @@ a {
   font-weight: 400;
 }
 
+span.stretch{
+  display:inline-block;
+  -webkit-transform:scale(0.7,1.5); /* Safari and Chrome */
+  -moz-transform:scale(0.7,1.5); /* Firefox */
+  -ms-transform:scale(0.7,1.5); /* IE 9 */
+  -o-transform:scale(0.7,1.5); /* Opera */
+  transform:scale(0.7,1.5); /* W3C */
+}
+
 header {
   position: relative;
 
@@ -113,8 +147,9 @@ header {
   min-height: 250px;
 
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 main {
@@ -187,18 +222,7 @@ nav {
   color: var(--title-text);
   opacity: 0;
   animation: fadeIn .5s ease-in 1 forwards;
-}
-
-#name {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-size: 40px;
-  font-weight: bold;
-  color: var(--title-text);
-  padding-left: 0px;
-  padding-right: 10px;
-  bottom: 0;
+  align-self: flex-start;
 }
 
 .button {
