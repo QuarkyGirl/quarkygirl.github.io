@@ -100,9 +100,6 @@ p {
   margin-bottom: 10px;
   padding: 0;
 
-  /*   display: block;
-    overflow: hidden; */
-
   font-family: 'Source Serif Pro', serif;
   font-size: 1.125em;
   font-weight: 300;
@@ -146,25 +143,32 @@ main {
   padding-bottom: 20px;
   max-width: 900px;
 
-  flex-grow: 1;
+  display:flex;
+  flex-direction: row;
+  align-items: stretch;
 }
 
 #content{
+  margin: 0;
+  padding: 0;
   flex: 2;
 }
 
 .ImageWrapper {
-  float: right;
-  width: 33%;
-  max-width: 300px;
+  padding:0;
+  margin:0;
+  padding-left: 20px;
+
+  flex:1.5;
 }
 
-img{
-  max-width: 100%;
+#profile{
   padding: 0;
   margin: 0;
-  padding-top: 50px;
-  padding-bottom: 10px;
+  width:100%;
+  box-sizing: content-box;
+
+  mix-blend-mode: multiply;
 }
 
 svg {
@@ -243,6 +247,10 @@ footer {
   margin: 0;
   padding: 0;
   width: 100%;
+
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
 }
 
 footer p {
@@ -263,5 +271,15 @@ footer p {
   nav a{
     font-size: 1.25em;
     padding-right: 10px;
+  }
+}
+
+@media all and (max-width: 600px){
+  main {
+    flex-direction: column;
+  }
+
+  .ImageWrapper{
+    padding-left: 0;
   }
 }
