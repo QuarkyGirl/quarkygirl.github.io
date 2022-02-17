@@ -31,20 +31,21 @@ html {
   --body-text: black;
   --highlight-text: #e83e8d;
   --footer-text: grey;
+
+  --content-width: 840px
 }
 
 body {
   margin: 0;
   padding: 0;
-  padding-left: 22%;
-  padding-right: 22%;
+  padding-left: 20px;
+  padding-right: 20px;
   min-height: 100%;
 
   display: flex;
   flex-direction: column;
-
+  align-items: center;
   font-family: 'Mix-Serif';
-  background: url(paper.svg);
 }
 
 ul {
@@ -128,7 +129,9 @@ header {
   padding-top: 20px;
   padding-bottom: 20px;
   height: 35%;
+  width: 100%;
   min-height: 250px;
+  max-width: var(--content-width);
 
   display: flex;
   flex-direction: row;
@@ -141,8 +144,8 @@ main {
   padding: 0;
   padding-top: 20px;
   padding-bottom: 20px;
-  max-width: 900px;
-
+  width:100%;
+  max-width: var(--content-width);
   display:flex;
   flex-direction: row;
   align-items: stretch;
@@ -159,7 +162,7 @@ main {
   margin:0;
   padding-left: 20px;
 
-  flex:1.5;
+  width:300px;
 }
 
 #profile{
@@ -247,6 +250,7 @@ footer {
   margin: 0;
   padding: 0;
   width: 100%;
+  max-width: var(--content-width);
 
   flex-grow: 1;
   display: flex;
@@ -258,12 +262,7 @@ footer p {
   color: var(--footer-text);
 }
 
-@media all and (max-width: 1000px){
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
+@media all and (max-width: 750px){
   h1 {
     font-size: 1.625em;
   }
@@ -272,14 +271,15 @@ footer p {
     font-size: 1.25em;
     padding-right: 10px;
   }
-}
 
-@media all and (max-width: 600px){
   main {
     flex-direction: column;
   }
 
   .ImageWrapper{
     padding-left: 0;
+    width:100%;
+    max-width: 400px;
+    align-self: center;
   }
 }
