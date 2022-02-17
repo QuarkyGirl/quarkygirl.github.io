@@ -1,24 +1,24 @@
-.BodyContainer h1 {
+#content h1 {
   padding-left: 0%;
   margin-bottom: 0px;
   color: #bf4aa8;
 }
 
-.BodyContainer h2{
+#content h2{
   padding-left: 0%;
   margin: 0px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.BodyContainer h3{
-  padding-top: 5px;
+#content h3{
+  padding-top: 0px;
   padding-left: 0%;
-  margin: 0px;
+  margin-top: 10px;
   margin-bottom: 0;
 }
 
-.BodyContainer p{
+#content p{
   padding-left: 0%;
   line-height: normal;
   margin:0;
