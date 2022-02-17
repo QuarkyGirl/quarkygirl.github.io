@@ -46,6 +46,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: 'Mix-Serif';
+  background: url(paper.svg);
 }
 
 ul {
