@@ -139,6 +139,10 @@ header {
   align-items: flex-end;
 }
 
+#name {
+  z-index: 2;
+}
+
 main {
   margin: 0;
   padding: 0;
