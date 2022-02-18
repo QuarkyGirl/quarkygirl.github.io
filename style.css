@@ -25,12 +25,12 @@ html {
   width: 100%;
 
   --bg: white;
-  --theme: #E01069;
+  --theme: #e83e8d;
   --title-text: black;
   --heading-text: black;
   --body-text: black;
   /*old: e83e8d*/
-  --highlight-text: #E01069;
+  --highlight-text: #e83e8d;
   --footer-text: #686868;
 
   --content-width: 840px
