@@ -25,12 +25,13 @@ html {
   width: 100%;
 
   --bg: white;
-  --theme: #e83e8d;
+  --theme: #E01069;
   --title-text: black;
   --heading-text: black;
   --body-text: black;
-  --highlight-text: #e83e8d;
-  --footer-text: grey;
+  /*old: e83e8d*/
+  --highlight-text: #E01069;
+  --footer-text: #686868;
 
   --content-width: 840px
 }
