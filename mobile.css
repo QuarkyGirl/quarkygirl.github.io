@@ -44,7 +44,9 @@ body {
   flex-direction: column;
 
   font-family: 'Mix-Serif';
-  background: url(paper.svg);
+  background: url("img/canvas_texture.jpg");
+  background-size: 512px;
+  background-repeat: repeat;
 }
 
 ul {
