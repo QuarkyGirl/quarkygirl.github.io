@@ -33,7 +33,7 @@ html {
   --highlight-text: #e83e8d;
   --footer-text: #686868;
 
-  --content-width: 840px
+  --content-width: 53em;
 }
 
 body {
@@ -48,7 +48,7 @@ body {
   align-items: center;
   font-family: 'Mix-Serif';
   background: url("img/canvas_texture.jpg");
-  background-size: 512px;
+  background-size: 48em;
   background-repeat: repeat;
 }
 
@@ -134,7 +134,7 @@ header {
   padding-bottom: 20px;
   height: 35%;
   width: 100%;
-  min-height: 250px;
+  min-height: 15.5em;
   max-width: var(--content-width);
 
   display: flex;

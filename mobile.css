@@ -45,7 +45,7 @@ body {
 
   font-family: 'Mix-Serif';
   background: url("img/canvas_texture.jpg");
-  background-size: 512px;
+  background-size: 48em;
   background-repeat: repeat;
 }
 
@@ -134,7 +134,7 @@ header {
   padding-top: 20px;
   padding-bottom: 20px;
   height: 35%;
-  min-height: 250px;
+  min-height: 15em;
 
   display: flex;
   flex-direction: row;
@@ -147,7 +147,7 @@ main {
   padding: 0;
   padding-top: 20px;
   padding-bottom: 20px;
-  max-width: 900px;
+  max-width: 58em;
 
   flex-grow: 1;
 }
