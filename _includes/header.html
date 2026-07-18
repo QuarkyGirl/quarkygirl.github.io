@@ -1,0 +1,21 @@
+<header id=header>
+  <svg height="100%" width="100%" id=box alt="animation of Delauney triangulation">
+    <title>Delauney Triangulation Banner</title>
+    <desc>An animation of Delauney triangulation of various moving points.</desc>
+  </svg>
+  <div id=mouse-listener></div>
+  <nav role="navigation">
+    <ul id=menu>
+      {% for item in site.data.navigation %}
+        <li class=button><a href="{{ item.link }}">{{ item.name }}</a></li>
+      {% endfor %}
+    </ul>
+    {% include search-redirect.html %}
+  </nav>
+  <h1 id=name>
+    {nell hall}
+    {% if page.title != "home" and include.subscript %}
+      <mark>_{<span>{{page.title}}</span>}</mark>
+    {% endif %}
+  </h1>
+</header>

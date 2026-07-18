@@ -1,7 +1,7 @@
 var svgNS = "http://www.w3.org/2000/svg";
 
-const foreground = "var(--theme)";
-const background = "var(--bg)";
+const foreground = "var(--animation-theme-color)";
+const background = "var(--animation-bg-color)";
 const baseOpacity = 0.5;
 
 const radius = "2.5";
@@ -61,13 +61,30 @@ function updatePoint(point){
   point.v_y = point.v_y + delta*point.a_y;
   let new_x = point.x + delta*point.v_x;
   let new_y = point.y + delta*point.v_y;
-  if ((new_x <= 0) || (new_x >= width) || (new_y <= 0) || (new_y >= height)){
+  //if ((new_x <= 0) || (new_x >= width) || (new_y <= 0) || (new_y >= height)){
+  //  new_x = Math.max(new_x,min_dist,point.x);
+  //  new_x = Math.min(new_x,width-min_dist,point.x);
+  //  new_y = Math.max(new_y,min_dist,point.y);
+  //  new_y = Math.min(new_y,height-min_dist,point.y);
+  //  point.v_x = 0;
+  //  point.v_y = 0;
+  //}
+  if ((new_x <= min_dist) || (new_x >= width-min_dist)){
+    new_x = Math.max(new_x,min_dist,point.x);
+    new_x = Math.min(new_x,width-min_dist,point.x);
+    new_y = Math.max(new_y,min_dist,point.y);
+    new_y = Math.min(new_y,height-min_dist,point.y);
+    new_x = Math.min(new_x,width-min_dist,point.x);
+    point.v_x = -point.v_x/2.0;
+    point.v_y = 0;
+  }
+  else if ((new_y <= min_dist) || (new_y >= height-min_dist)){
     new_x = Math.max(new_x,min_dist,point.x);
     new_x = Math.min(new_x,width-min_dist,point.x);
     new_y = Math.max(new_y,min_dist,point.y);
     new_y = Math.min(new_y,height-min_dist,point.y);
     point.v_x = 0;
-    point.v_y = 0;
+    point.v_y = -point.v_y/2.0;
   }
   point.x = new_x;
   point.y = new_y;
@@ -195,8 +212,8 @@ function updateMousePoint(event){
   var x0 = boxContainer.offsetLeft;
   var y0 = boxContainer.offsetTop;
   var point = AllPoints[mouseIndex];
-  point.x = event.clientX - x0;
-  point.y = event.clientY - y0;
+  point.x = event.pageX - x0;
+  point.y = event.pageY - y0;
 }
 
 function removeMousePoint(){
@@ -208,7 +225,7 @@ function clickFunc(event){
     removeMousePoint();
     var x0 = boxContainer.offsetLeft;
     var y0 = boxContainer.offsetTop;
-    addPoint(event.clientX - x0, event.clientY - y0);
+    addPoint(event.pageX - x0, event.pageY - y0);
 }
 
 mouseListener.addEventListener("touchstart", function(event){isMobile = true;});

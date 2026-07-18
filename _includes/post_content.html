@@ -1,0 +1,17 @@
+<div class=post_title>
+  <h2><a href="{{ post.url }}">{{ include.post.title }}</a></h2>
+  <ul class=tag_box>
+    <li class="date"> {{ include.post.date | date_to_string }} | </li>
+    {%- if include.post.tags -%}
+      {% for tag in include.post.tags %}
+          <li class="tag"><a
+            href="/search?q={{"tags:"|append: tag | url_encode }}">{{tag}}</a></li>
+      {% endfor %}
+    {%- endif -%}
+  </ul>
+</div>
+{% if include.truncate %}
+  {{include.post.content | truncatewords: include.truncate}}
+{% else %}
+  {{ include.post.content }}
+{% endif %}
