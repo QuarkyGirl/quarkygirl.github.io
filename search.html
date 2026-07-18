@@ -3,10 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-title: home
+title: search
 ---
-<ul>
-  {% for post in site.posts %}
-    <li class=post> {% include post_content.html post=post %}</li>
-  {% endfor %}
-</ul>
+
+{% include search-lunr.html %}

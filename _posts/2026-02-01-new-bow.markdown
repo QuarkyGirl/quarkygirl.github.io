@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Violin bow: the head, before and after"
+date:   2026-02-01 22:44:13 -0800
+tags:
+  - bowmaking
+galleries:
+ # gallery number one
+ 1:
+   # row one in gallery one
+   -
+     - { url: '/assets/images/posts/2026-02-01-new-bow/pre-1.jpeg', alt: 'alt 1'}
+     - { url: '/assets/images/posts/2026-02-01-new-bow/pre-2.jpeg', alt: 'alt 1'}
+     - { url: '/assets/images/posts/2026-02-01-new-bow/post-1.jpeg', alt: 'alt 1'}
+     - { url: '/assets/images/posts/2026-02-01-new-bow/post-2.jpeg', alt: 'alt 1'}
+
+---
+{% include gallery.html  gallery=1 %}
+
+The head of the bow is one of the big ``cruxes'' for me of the bowmaking process. While other aspects like the camber and graduations more directly affect the feel of the bow when played, the shape of the head really defines the feel of the bow artistically.
+
+In the above, you can see my latest bow head in process. In the first two images, I've defined the first of the chamfers used to control the shape of the head. Part of why this is the crux of the process is that these must flow dynamically, gracefully, and be a perfect surface -- very hard to do!
+
+In the latter two photos, you can see the finished result. I'm pretty happy with it, though I think there are some things I'll do differently next time. This head draws pretty strongly on those of Persoit, and I really wanted the start of the arête (at the top of the head) to be quite strong. I would actually like a shorter, more delicate bec in the next one.

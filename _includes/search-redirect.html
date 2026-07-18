@@ -1,0 +1,14 @@
+<script>
+  function redirect_search(value){
+    console.log('hi');
+    console.log(value);
+    console.log('hello');
+    search_params = new URLSearchParams({q:value});
+    window.location.href = "/search?"+search_params.toString();
+    return false;
+  }
+</script>
+
+<form onSubmit="return redirect_search(document.getElementById('lunrsearch').value)" id="lunrform">
+    <p><input type="text" class="form-control" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Search all posts" /></p>
+</form>

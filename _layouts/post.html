@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+{% include generic_head.html %}
+<body>
+
+{% include header.html subscript=false%}
+
+<main>
+  <div id=content>
+    <div class=post>
+      {% include post_content.html post=page truncate=false%}
+    </div>
+  </div>
+</main>
+
+{% include footer.html %}
+
+</body>
+{% include script_includes.html %}
+
+</html>
