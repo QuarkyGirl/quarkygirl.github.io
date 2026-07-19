@@ -5,7 +5,7 @@ subtitle: Hi! I'm Nell
 permalink: /about
 ---
 
-Particle theorist + violin bowmaker
+Particle theorist ● Violin bowmaker
 
 ### Physics
 

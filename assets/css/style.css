@@ -406,28 +406,44 @@ footer p {
   padding: 0;
   margin-top: 20px;
   margin-bottom: 20px;
-  height: 300px;
   display:flex;
   overflow-x: scroll;
   overflow-y:hidden;
-  scrollbar-color: var(--animation-theme-color);
   justify-content: space-around;
 }
 
 .row a {
-  display: inline-block;
+  flex: 1;
   margin: 0;
   padding: 0;
-  height:100%;
   margin-right:20px;
+  min-width: 100px;
+  max-height: 300px;
+  max-width: 70%;
+  width:auto;
+  height:auto;
+  display: flex;
+  justify-content: center;
 }
 
 .row img {
-  max-height:100%;
-  width:auto;
   margin: 0;
   padding: 0;
   border-radius: 5px;
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+.post_title img {
+  margin: 0;
+  padding: 0;
+  margin-right: 30px;
+  width: 100px;
+  max-width: 50%;
+  height: auto;
+  border-radius: 50%
 }
 
 @media all and (max-width: 600px){
