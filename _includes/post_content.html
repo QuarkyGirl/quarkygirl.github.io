@@ -10,8 +10,10 @@
     {%- endif -%}
   </ul>
 </div>
-{% if include.truncate %}
-  {{include.post.content | truncatewords: include.truncate}}
-{% else %}
-  {{ include.post.content }}
-{% endif %}
+<div class=post_content>
+  {% if include.truncate %}
+    {{include.post.content | truncatewords: include.truncate}}
+  {% else %}
+    {{ include.post.content }}
+  {% endif %}
+</div>

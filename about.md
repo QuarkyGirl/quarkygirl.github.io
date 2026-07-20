@@ -5,7 +5,9 @@ subtitle: Hi! I'm Nell
 permalink: /about
 ---
 
-Particle theorist ● Violin bowmaker
+Particle theorist - Violin bowmaker
+
+[Download resume](/static-files/about/Eleanor_Hall_Resume.pdf)
 
 ### Physics
 

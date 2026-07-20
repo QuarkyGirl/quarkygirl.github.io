@@ -9,10 +9,10 @@ galleries:
  1:
    # row one in gallery one
    -
-     - { url: '/assets/images/posts/2026-02-01-new-bow/pre-1.jpeg', alt: 'alt 1'}
-     - { url: '/assets/images/posts/2026-02-01-new-bow/pre-2.jpeg', alt: 'alt 1'}
-     - { url: '/assets/images/posts/2026-02-01-new-bow/post-1.jpeg', alt: 'alt 1'}
-     - { url: '/assets/images/posts/2026-02-01-new-bow/post-2.jpeg', alt: 'alt 1'}
+     - { url: '/static-files/posts/2026-02-01-new-bow/pre-1.jpeg', alt: 'alt 1'}
+     - { url: '/static-files/posts/2026-02-01-new-bow/pre-2.jpeg', alt: 'alt 1'}
+     - { url: '/static-files/posts/2026-02-01-new-bow/post-1.jpeg', alt: 'alt 1'}
+     - { url: '/static-files/posts/2026-02-01-new-bow/post-2.jpeg', alt: 'alt 1'}
 
 ---
 {% include gallery.html  gallery=1 %}

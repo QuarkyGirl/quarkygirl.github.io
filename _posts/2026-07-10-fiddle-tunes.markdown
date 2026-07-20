@@ -10,17 +10,23 @@ galleries:
  1:
    # row one in gallery one
      -
-       - { url: '/assets/images/posts/2026-07-10-fiddle-tunes/mule-barn.jpg', alt='midwestern jam at the mule barn'}
+       - { url: '/static-files/posts/2026-07-10-fiddle-tunes/mule-barn.jpg', alt='midwestern jam at the mule barn'}
 ---
 {% include gallery.html  gallery=1 %}
 
 Made my way back up to Port Townsend for Fiddle Tunes, the annual
 festival up at Fort Worden.
 
-Learned some new tunes, played some old ones.
-Made some new friends, played tunes with some old ones.
+Highlights of the week:
+- Midwestern jam at the mule barn (pictured)
+- Learning that most of the music I've played over the last couple years with Joe
+and Charles is secretly midwestern, even when it's not
+- Thought I was missing pride to be here but kept ending up in jams with oops all
+trans women
+- Dancing and playing music until 2 am
 
-Danced a lot, played until 3am, slept little.
+Lowlights of the week:
+- Busting my guitar
 
 It's like Catullus 46:
 >Iam ver egelidos refert tepores,  
