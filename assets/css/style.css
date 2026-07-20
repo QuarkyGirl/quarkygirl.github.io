@@ -25,7 +25,7 @@
 
   --body-font-weight:       300;
   --heading-font-weight:  400;
-  --highlight-font-weight:  500;
+  --highlight-font-weight:  400;
 }
 
 @font-face {
@@ -230,6 +230,23 @@ main {
 }
 
 .tag a:hover {
+    color: var(--highlight-text-color);
+}
+
+.post_content{
+  margin: 0;
+  padding: 0;
+}
+
+.post_content ul li{
+  margin-left: 10px;
+}
+
+.post_content ul li:before{
+  content: "- ";
+}
+
+.post_content a:hover {
     color: var(--highlight-text-color);
 }
 
