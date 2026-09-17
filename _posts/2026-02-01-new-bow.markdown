@@ -4,15 +4,16 @@ title:  "Violin bow: the head, before and after"
 date:   2026-02-01 22:44:13 -0800
 tags:
   - bowmaking
+  - projects
 galleries:
  # gallery number one
  1:
    # row one in gallery one
    -
-     - { url: '/static-files/posts/2026-02-01-new-bow/pre-1.jpeg', alt: 'alt 1'}
-     - { url: '/static-files/posts/2026-02-01-new-bow/pre-2.jpeg', alt: 'alt 1'}
-     - { url: '/static-files/posts/2026-02-01-new-bow/post-1.jpeg', alt: 'alt 1'}
-     - { url: '/static-files/posts/2026-02-01-new-bow/post-2.jpeg', alt: 'alt 1'}
+     - { url: '/static-files/posts/2026-02-01-new-bow/pre-1.jpeg', alt: 'Bow head, chamfered'}
+     - { url: '/static-files/posts/2026-02-01-new-bow/pre-2.jpeg', alt: 'Bow head, chamfered'}
+     - { url: '/static-files/posts/2026-02-01-new-bow/post-1.jpeg', alt: 'Bow head, finished'}
+     - { url: '/static-files/posts/2026-02-01-new-bow/post-2.jpeg', alt: 'Bow head, finished'}
 
 ---
 {% include gallery.html  gallery=1 %}

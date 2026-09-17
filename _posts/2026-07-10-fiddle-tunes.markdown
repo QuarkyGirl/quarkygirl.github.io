@@ -5,6 +5,7 @@ date:   2026-7-10
 tags:
   - music
   - banjo
+  - fun
 galleries:
  # gallery number one
  1:
